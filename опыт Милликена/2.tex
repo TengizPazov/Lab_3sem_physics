@@ -1,0 +1,210 @@
+\documentclass[a4paper,12pt]{article} 
+\usepackage[T2A]{fontenc}			
+\usepackage[utf8]{inputenc}			
+\usepackage[english,russian]{babel}	
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+\usepackage[colorlinks, linkcolor = blue]{hyperref}
+\usepackage{upgreek}\usepackage[left=2cm,right=2cm,top=2cm,bottom=3cm,bindingoffset=0cm]{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{xcolor}
+\author{Пазов Тенгиз}
+\title{3.3.3. Опыт Милликена. Теоретический файл}
+\date{16.09.2024}
+\begin{document}
+\maketitle
+\newpage 
+\section*{Теория}
+Если элементарный заряд существует, то все заряды будут ему кратны. В опыте будут измерятся заряды капелек масла, несущих несколько элементарных зарядов.\\
+Для измерения заряда будем исследовать движение капелек в электрическом поле. Уравнение движения капли при свободном падении
+\begin{equation}
+m \dfrac{dv}{dt}=mg-F_{\text{тр}},
+\end{equation}
+где $m$ -- масса капли, $v$ -- её скорость, $F_{\text{тр}}=6\pi \eta rv = kv$ -- сила вязкого трения, $r$ -- радиус капли, $\eta$ -- коэффициент вязкости воздуха. Отсюда получаем 
+\begin{equation}
+v = \dfrac{mg}{k}\left(1 - e^{-kt/m}\right).
+\end{equation}
+Скорость установится на
+$$
+v_{\text{уст}}=\dfrac{mg}{k}=\dfrac{2}{9}\dfrac{\rho}{\eta}gr^2,
+$$
+где $\rho$ -- плотность масла. Установление этой скорости происходит с постоянной
+$$
+\tau = \dfrac{m}{k}=\dfrac{2}{9}\dfrac{\rho}{\eta}r^2
+$$
+Обозначая $h$ путь капли, пройденный за $t_0$, получаем формулу для её радуса:
+\begin{equation}
+r = \sqrt{\dfrac{9\eta h}{2\rho gt_0}}.
+\end{equation}
+В случае движения в электрическом поле конденсатора с разностью потенциалов $V$ и расстоянием $l$ между пластинами получаем уравнение движения
+\begin{equation}
+m \dfrac{dv}{dt}=\dfrac{qV}{l}-mg-kv,
+\end{equation}
+Новое слагаемое не влияет на $\tau$, новая установившаяся скорость
+$$
+v_{\text{уст}}'=\dfrac{qV/l - mg}{k}.
+$$
+Если $t$ -- время подъёма на высоту $h$, то можно получить формулу заряда капли:
+$$
+\dfrac{qV}{kl}-v_{\text{уст}}=v_{\text{уси}}'=\dfrac{h}{t};
+$$
+$$
+k=6\pi \eta r  = 6\pi \eta  \sqrt{\dfrac{9\eta h}{2\rho gt_0}};
+$$
+Получаем итоговую формулу для вычисления заряда:
+\begin{center}
+$q = 9\pi \sqrt{\dfrac{2\eta^3 h^3}{g\rho}}\cdot \dfrac{l(t_0+t)}{Vt^{3/2}_0t}$
+\end{center}
+Теперь приведем таблицу с результатами вычислений зарядов.
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Заряды капель}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2.7cm}||p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}| }
+ \hline
+    $q_{1}, 10^{-19}$Кл & 1.717  $\sigma = 0.113$ & 1.714  $\sigma = 0.0998$ & 1.315  $\sigma = 0.076$ & 0.993   $\sigma = 0.551$ & 0.744  $\sigma = 0.041$\\
+\hline
+    $q_{2}, 10^{-19}$Кл & 1.463  $\sigma = 0.083$ & 1.258  $\sigma = 0.071$ & 1.297  $\sigma = 0.073$ & 1.058  $\sigma = 0.055$ & 1.035  $\sigma = 0.056$\\   
+\hline
+    $q_{3}, 10^{-19}$Кл & 1.302  $\sigma = 0.073$ & 1.998  $\sigma = 0.115$ & 1.534  $\sigma = 0.088$ & 1.098  $\sigma = 0.0586$ & 1.262  $\sigma = 0.0694$\\
+\hline
+    $q_{4}, 10^{-19}$Кл & 1.252  $\sigma = 0.069$ & 1.327  $\sigma = 0.074$ & 1.473  $\sigma = 0.083$ & 1.509  $\sigma = 0.086$ & 1.064  $\sigma = 0.059$\\
+
+\hline
+	$q_{5}, 10^{-19}$Кл & 2.294  $\sigma = 0.146$ & 2.330  $\sigma = 0.149$ & 1.409  $\sigma = 0.0789$ & 0.951  $\sigma = 0.052$ & 1.147  $\sigma = 0.064$\\
+\hline
+    \end{tabular}
+\end{table}
+Из результатов вычислений разобьем на группы заряды по кучности и вычислим среднее в каждой из таких групп. Получим 5 значений:
+\newpage
+\par
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Средние по кучностям значения}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2cm}||p{1.2cm}|p{1.2cm}|p{1.2cm}|p{1.cm}|p{1.2cm}|p{1.2cm}|p{1.2cm}| }
+ \hline  
+    $q, 10^{-19}$Кл & 1.282 & 1.222 & 1.439 & 1.325 & 1.626\\
+\hline
+
+    \end{tabular}
+\end{table}
+\par Таблица погрешностей средних величин зарядов 
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Погрешности средних значений зарядов}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2.7cm}||p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}| }
+ \hline
+    $\sigma_{sr}$, $10^{-19}$м/с & 0.177 & 0.153 & 0.185 & 0.168 & 0.238 \\
+ \hline
+    \end{tabular}
+\end{table}
+Как видно из данных значений в качестве элементарного заряда можно взять наименьший из перечисленных, то есть $q = 1.222 \cdot 10^{-19}$ Кл. Данная величина есть 76,27 \% от заряда, который обнаружил Милликен.
+\par В таблице видно, что помимо величины заряда для каждой из частиц, присутствует величина $\sigma$, показывающая величину погрешности для каждой из величин зарядов.
+\begin{equation}
+ \sigma_{q} \approx q \sqrt{(\frac{\delta U}{U})^2 + 5(\frac{\delta t}{t + t'})^2}
+\end{equation}
+\par Приняв $\delta U$ за $5\%$ и $\delta t$ за $\approx 0.2$ с, и проходя по массиву времен, получим массив погрешностей для каждого измеренного заряда. В таблице приведены погрешности в размерности $10^{-19}$ Кл.
+\par А погрешность среднего значения заряда в каждой куче может быть посчитана по следующей формуле:
+\begin{equation}
+ \sigma_{sr} = \sqrt{\sum \sigma_{i}^{2}}
+\end{equation}
+\par где $\sigma_{i}$ - погрешность iого заряда в куче.
+\par Теперь рассмотрим:
+\begin{equation}
+v = \dfrac{mg}{k}\left(1 - e^{-kt/m}\right).
+\end{equation}
+\par Чтобы найти отклонение установившейся скорости от среднего значения на промежутке времени релаксации, проинтегрируем данное выражение по времени и разделим на t.
+\par Получаем:
+\begin{equation}
+v \int dt = \int\dfrac{mg}{k}\left(1 - e^{-kt/m}\right)dt.
+\end{equation}
+\par Разделив на t, получаем:
+\begin{equation}
+v_{sr} = \frac{\int\dfrac{mg}{k}\left(1 - e^{-k\tau/m}\right)dt}{\tau}
+\end{equation}
+\par где $\tau$ - время релаксации.
+\par Взяв интеграл, получим:
+\begin{equation}
+v_{sr} = 1 - e^{-k\tau/m}
+\end{equation}
+Погрешность установившейся скорости может быть рассчитана по следующей формуле:
+\begin{equation}
+\sigma_{v_{\infty}} = v_{\infty}\sqrt{(\frac{\sigma_{h}}{h})^{2} + (\frac{\sigma_{t}}{t})^{2}}
+\end{equation}
+А погрешность вычисления средней скорости:
+\begin{equation}
+\sigma_{v_{sr}} = \sqrt{(\frac{\partial v_{sr}}{\partial \tau})^{2} \sigma_{\tau}^{2} + (\frac{\partial v_{sr}}{\partial r})^{2} \sigma_{r}^{2}} = \sqrt{\frac{81}{4}\frac{\eta^{2}}{r^{4}\rho^{2}}e^{-\frac{9\eta\tau}{r^{2}\rho}}\sigma_{\tau}^{2} + 81\frac{\eta^{2}\tau^{2}}{\rho^{2}r^{6}}e^{-\frac{9\eta\tau}{r^{2}\rho}}\sigma_r^{2}}
+\end{equation}
+\par Как видно из данной формулы, для вычисления погрешности среденей скорости нам потребуется погешность вычисления радиуса частицы. Найдем его по формуле:
+\begin{equation}
+\sigma_{r} = \frac{1}{2}r\sqrt{(\frac{\sigma_{h}}{h})^{2} + (\frac{\sigma_{t}}{t})^{2}}
+\end{equation}
+\par Приведем таблицу погрешностей радиусов частиц
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Погрешности радиусов частиц}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2.7cm}||p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}| }
+ \hline
+    $\sigma_{r}$, $10^{-9}$м & 8.17 & 7.34 & 6.74 & 6.71 &5.83\\
+ \hline
+    \end{tabular}
+\end{table}
+\par Приведем таблицу для средних значений, а также значений установившейся скоростей
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Средняя и установившаяся скорости}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2.9cm}||p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}| }
+ \hline
+    $v_{est}$, $10^{-5}, \sigma_{v_{est}}$, $10^{-7}$м/с & 1.601, $\sigma_{v_{est}} = 6.72$ & 1.329, $\sigma_{v_{est}} = 5.50$ & 1.141, $\sigma_{v_{est}} = 4.68$ & 1.132, $\sigma_{v_{est}} = 4.74$ & 0.872, $\sigma_{v_{est}} = 3.54$\\
+ \hline
+    $v_{sr}$, $10^{-5}\sigma_{v_{sr}}$, $10^{-7}$м/с& 0.632, $\sigma_{v_{sr}} = 3.21$ & 0.632, $\sigma_{v_{sr}} = 5.03$ & 0.632, $\sigma_{v_{sr}} = 5.33$ & 0.632, $\sigma_{v_{sr}} = 4.30$ & 0.632, $\sigma_{v_{sr}} = 2.89$ \\  
+ \hline
+    \end{tabular}
+\end{table}
+
+Т.о. используя таблицу можем найти отклонение от средней величины скорости.
+\par Теперь приведем таблицу с временами релаксации, а также с $s(t)$, пройденным частицей за данное время.
+\begin{table}[h]
+    \centering
+    \begin{center}
+    \caption{Средняя и установившаяся скорости}
+    \end{center}
+    \vspace{0.1cm}
+    \label{tab:my_label}
+    \begin{tabular}{ |p{2.7cm}||p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}|p{2.7cm}| }
+ \hline
+    $\tau$, $10^{-6}$, $\sigma_{\tau}$, $10^{-8}$,с & 1.633, $\sigma_{\tau} = 6.86$ & 1.363, $\sigma_{\tau} = 5.61$ & 1.164, $\sigma_{\tau} = 4.78$ & 1.161, $\sigma_{\tau} = 4.75$ &  0.892, $\sigma_{\tau} = 3.61$ \\
+ \hline
+    $s$, $10^{-11}$, $\sigma_{S}$, $10^{-12}$м & 2.613, $\sigma_{S} = 2.20$ & 1.801, $\sigma_{S} = 1.49$ & 1.328, $\sigma_{S} = 1.09$ & 1.308, $\sigma_{S} = 1.07$ & 0.775, $\sigma_{S} = 0.63$ \\  
+ \hline
+    \end{tabular}
+\end{table}
+\par Погрешность вычисления пути:
+\begin{equation}
+\sigma_{S} = S\sqrt{4(\frac{\sigma_{v_{\infty}}}{v_{\infty}})^{2}}
+\end{equation}
+\par Погрешность измерения времени релаксации:
+\begin{equation}
+\sigma_{\tau} = \tau \frac{\sigma_{v_{\infty}}}{v_{\infty}}
+\end{equation}
+Погрешности, которые были получены этими формулами, записаны в таблицах.
+\end{document}
